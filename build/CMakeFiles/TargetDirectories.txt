@@ -1,1 +1,0 @@
-/home/manasi/Documents/opencvstuff/build/CMakeFiles/DisplayImage.dir

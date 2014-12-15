@@ -30,8 +30,9 @@ output.at<uchar>(y,x)=255;
 }
 }
 }
-findContours(output.clone(), contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
-cv::drawContours(output, contours, -1, CV_RGB(255,255,255), -1);
+cout<<RETR_EXTERNAL<<endl;
+findContours(output.clone(), contours, RETR_EXTERNAL, CHAIN_APPROX_NONE);
+cv::drawContours(output, contours, -1, Scalar(255,255,255), -1);
 for (int i = 0; i < contours.size(); i++)
 {
      area = cv::contourArea(contours[i]);  
@@ -41,7 +42,7 @@ for (int i = 0; i < contours.size(); i++)
         std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.2)
         //std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)   
     {
-        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, CV_RGB(255,0,0), 2);
+        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, Scalar(255,0,0), 2);
     }
 }
 cout<<radius;

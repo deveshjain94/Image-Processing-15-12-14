@@ -21,10 +21,10 @@ int main(int argc,char * argv[])
 cv::cvtColor(~image, gray, COLOR_BGR2GRAY);
 cv::threshold(gray, gray, 220, 255, cv::THRESH_BINARY);
 std::vector<std::vector<cv::Point> > contours;
-findContours(gray.clone(), contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
+findContours(gray.clone(), contours, RETR_EXTERNAL, CHAIN_APPROX_NONE);
 
 // Fill holes in each contour
-cv::drawContours(gray, contours, -1, CV_RGB(255,255,255), -1);
+cv::drawContours(gray, contours, -1, Scalar(255,255,255), -1);
 
 
 for (int i = 0; i < contours.size(); i++)
@@ -38,13 +38,13 @@ for (int i = 0; i < contours.size(); i++)
         std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.2 &&
         std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)   
     {
-        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, CV_RGB(255,0,0), 2);
+        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, Scalar(255,0,0), 2);
     }
 }
 
 
 
-namedWindow("Output Image",1);
+
 imshow("Output image",image);
 waitKey(0);
 return 0;
