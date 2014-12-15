@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
+<<<<<<< HEAD
 
+=======
+#include <opencv/highgui.h>
 using namespace cv;
 
 int main(int argc, char** argv )
@@ -26,5 +29,3 @@ int main(int argc, char** argv )
 
     return 0;
 }
-
-
