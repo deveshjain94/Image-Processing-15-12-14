@@ -38,8 +38,8 @@ for (int i = 0; i < contours.size(); i++)
     cv::Rect rect = cv::boundingRect(contours[i]); 
      radius = rect.width/2;                     
     if (area >= 30 &&
-        std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.2 &&
-        std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)   
+        std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.2)
+        //std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)   
     {
         cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, CV_RGB(255,0,0), 2);
     }
@@ -52,7 +52,3 @@ imshow("Output Image",output);
 waitKey(0);
 return 0;
 }
-
-
-
-
