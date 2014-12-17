@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include <opencv/cv.h>
+#include <time.h>
+
 
 using namespace std;
 using namespace cv;
@@ -19,11 +21,20 @@ int greenmax=80;
 int greenmin=35;
 int bluemax=90;
 int bluemin=50;
+int isColor = 1;
+int fps     = 25;  // or 30
+int frameW  = 320; // 744 for firewire cameras
+int frameH  = 240;
+CvSize size;
 
-
+size.width = frameW;
+size.height = frameH;
+VideoWriter video("Video.avi",-1,fps,size);
 
 namedWindow("Camera_Output", 1); //Create window
 VideoCapture capture(0); //Capture using any camera connected to your system
+float t0=clock();
+float t1=0;
 Mat image;
 float radius=0;
 while(1){ //Create infinte loop for live streaming
@@ -66,6 +77,10 @@ namedWindow("Input",2);
 imshow("Input",output);
 namedWindow("output",2);
 imshow("Output",image);  //Show image frames on created window
+t1=clock()-t0;
+cout<<t1/100000;
+cout<<"\n";
+video.write(output);
 key = waitKey(10); //Capture Keyboard stroke
 if (char(key) == 27){
 break; //If you hit ESC key loop will break.
