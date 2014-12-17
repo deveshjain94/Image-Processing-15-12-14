@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( vidrite)
+find_package( OpenCV REQUIRED )
+add_executable( vidrite vidrite.cpp )
+target_link_libraries( vidrite ${OpenCV_LIBS} )
