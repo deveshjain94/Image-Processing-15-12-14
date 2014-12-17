@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/devesh/Documents/srujana/Day1/Final/Exp4.cpp
+stdio.h
+-
+iostream
+-
+opencv2/opencv.hpp
+-
+stdlib.h
+-
+
