@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devesh/Documents/srujana/Day1/Final
+CMAKE_SOURCE_DIR = /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devesh/Documents/srujana/Day1/Final/Build
+CMAKE_BINARY_DIR = /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Exp4.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Exp4.dir/flags.make
 
 CMakeFiles/Exp4.dir/Exp4.cpp.o: CMakeFiles/Exp4.dir/flags.make
 CMakeFiles/Exp4.dir/Exp4.cpp.o: ../Exp4.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/devesh/Documents/srujana/Day1/Final/Build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Exp4.dir/Exp4.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Exp4.dir/Exp4.cpp.o -c /home/devesh/Documents/srujana/Day1/Final/Exp4.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Exp4.dir/Exp4.cpp.o -c /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Exp4.cpp
 
 CMakeFiles/Exp4.dir/Exp4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Exp4.dir/Exp4.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/devesh/Documents/srujana/Day1/Final/Exp4.cpp > CMakeFiles/Exp4.dir/Exp4.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Exp4.cpp > CMakeFiles/Exp4.dir/Exp4.cpp.i
 
 CMakeFiles/Exp4.dir/Exp4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Exp4.dir/Exp4.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/devesh/Documents/srujana/Day1/Final/Exp4.cpp -o CMakeFiles/Exp4.dir/Exp4.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Exp4.cpp -o CMakeFiles/Exp4.dir/Exp4.cpp.s
 
 CMakeFiles/Exp4.dir/Exp4.cpp.o.requires:
 .PHONY : CMakeFiles/Exp4.dir/Exp4.cpp.o.requires
@@ -124,6 +124,6 @@ CMakeFiles/Exp4.dir/clean:
 .PHONY : CMakeFiles/Exp4.dir/clean
 
 CMakeFiles/Exp4.dir/depend:
-	cd /home/devesh/Documents/srujana/Day1/Final/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devesh/Documents/srujana/Day1/Final /home/devesh/Documents/srujana/Day1/Final /home/devesh/Documents/srujana/Day1/Final/Build /home/devesh/Documents/srujana/Day1/Final/Build /home/devesh/Documents/srujana/Day1/Final/Build/CMakeFiles/Exp4.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build/CMakeFiles/Exp4.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Exp4.dir/depend
 

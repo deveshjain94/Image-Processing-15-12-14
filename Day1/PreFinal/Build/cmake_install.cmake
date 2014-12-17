@@ -1,4 +1,4 @@
-# Install script for directory: /home/devesh/Documents/srujana/Day1/Final
+# Install script for directory: /home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/devesh/Documents/srujana/Day1/Final/Build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/devesh/Documents/srujana/Day1/Final/Build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/devesh/Documents/srujana/ProjectFiles/Day1/PreFinal/Build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

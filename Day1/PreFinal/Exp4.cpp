@@ -10,6 +10,12 @@ using namespace cv;
 using namespace std;
 
 Mat image;
+int redmax=70; 
+int redmin=35;
+int greenmax=70;
+int greenmin=35;
+int bluemax=115;
+int bluemin=50;
 
 int main(int argc,char * argv[])
 {
@@ -24,7 +30,7 @@ for(y=0;y<image.rows;y++)
 {
 for(x=0;x<image.cols;x++)
 {
-if(((int)image.at<Vec3b>(y,x)[0]>0)&&((int)image.at<Vec3b>(y,x)[0]<20)&&((int)image.at<Vec3b>(y,x)[1]>0)&&((int)image.at<Vec3b>(y,x)[1]<20)&&((int)image.at<Vec3b>(y,x)[2]>0)&&((int)image.at<Vec3b>(y,x)[2]<20))
+if(((int)image.at<Vec3b>(y,x)[0]>bluemin)&&((int)image.at<Vec3b>(y,x)[0]<bluemax)&&((int)image.at<Vec3b>(y,x)[1]>greenmin)&&((int)image.at<Vec3b>(y,x)[1]<greenmax)&&((int)image.at<Vec3b>(y,x)[2]>redmin)&&((int)image.at<Vec3b>(y,x)[2]<redmax))
 {
 output.at<uchar>(y,x)=255;
 }
@@ -38,11 +44,10 @@ for (int i = 0; i < contours.size(); i++)
      area = cv::contourArea(contours[i]);  
     cv::Rect rect = cv::boundingRect(contours[i]); 
      radius = rect.width/2;                     
-    if (area >= 30 &&
-        std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.2)
+    if (area >= 800 && std::abs(1 - ((double)rect.width / (double)rect.height)) <= 0.7)
         //std::abs(1 - (area / (CV_PI * std::pow(radius, 2)))) <= 0.2)   
     {
-        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, Scalar(255,0,0), 2);
+        cv::circle(image, cv::Point(rect.x + radius, rect.y + radius), radius, Scalar(0,0,255), 2);
     }
 }
 cout<<radius;
