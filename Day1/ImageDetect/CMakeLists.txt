@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 2.8)
-project( exp4 )
-find_package( OpenCV REQUIRED )
-add_executable( exp4 exp4.cpp )
-target_link_libraries( exp4 ${OpenCV_LIBS} )
