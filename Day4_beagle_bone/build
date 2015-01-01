@@ -1,0 +1,3 @@
+echo "Building file"
+g++ -O2 `pkg-config --cflags --libs opencv` ./final_code.cpp -o final_code
+echo "Finished"

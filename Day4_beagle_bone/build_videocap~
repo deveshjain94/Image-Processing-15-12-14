@@ -1,0 +1,3 @@
+echo "Building file"
+g++ -O2 `pkg-config --cflags --libs opencv` ./videocap.cpp -o videocap
+echo "Finished"

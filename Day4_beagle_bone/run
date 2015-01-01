@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./final_code
+./median
+gnuplot plot.ps
